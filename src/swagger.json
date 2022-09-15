@@ -1,0 +1,77 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "RentalX Documentation",
+    "description": "This is API Rent",
+    "version": "1.0.0",
+    "contact": {
+      "email": "gusgegomes@hotmail.com"
+    }
+  },
+  "paths": {
+    "/User": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Create a User",
+        "description": "Create a new User",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "Gustavo Henrique",
+                  "email": "brabo@parara.br"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Operação realizada com sucesso"
+          },
+          "500": {
+            "description": "User encontrado"
+          }
+        }
+      },
+      "get": {
+        "tags": ["user_id"],
+        "summary": "Create a User",
+        "description": "Create a new User",
+        "responses": {
+          "200": {
+            "description": "Sucess",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

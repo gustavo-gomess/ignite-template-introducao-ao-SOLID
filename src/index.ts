@@ -9,3 +9,4 @@ app.use(express.json());
 app.use("/users", usersRoutes);
 
 export { app };
+
